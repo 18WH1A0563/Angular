@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Moving made easy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.pubnub.com/pubnub-3.15.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+  
+  
+</head>
+<body >
+
+<h5><p style = "margin-left: 1200px">  
+    <a routerLink="app-manager-login" style="font-size: large;">Employee Login</a>
+</p></h5>
+<div class="jumbotron text-center" >
+     
+  <h1>MOVING MADE EASY!</h1>
+  <p>With you on your journey to your new world.</p>  
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <h1><p>Looking for transport service?<br>
+        You are at the right place.<br>
+        <a routerLink="app-customer-registration">Click here</a></p><br></h1>
+       
+        <h3>For any queries, talk or chat with our bot &nbsp;
+        <button style="background-color: #1ab2ff;border: none;color: white;padding: 10px;text-align: center;text-decoration: none;display: inline-block;
+        font-size: 16px;margin: 2px 1px;cursor: pointer;border-radius: 50%;" onclick="runSpeechRecognition()">Talk here</button> &nbsp; <span id="action"></span>
+        <div id="output" class="hide"></div>
+        <br><br>Or else, you can always chat:<br>
+        <div><input id="input1" type="text" placeholder="say anything..."  /></div><br>
+		    <div style="text-align: left;">User:<span id="user"> </span></div>
+        <div style="text-align: left;">James Bot:<span id="chatbot"></span></div>
+        </h3>
+        <br>
+        
+    </div>
+      <div class="media border p-3" style="margin-left: 100px;height: 10%;">
+        <img src="assets\images\packers.png" alt="Moving made easy" >
+      </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<title>Chatbot</title>
+<style>
+
+span { 
+	color: black;
+} 
+
+
+#main div {
+	margin: 10px; 
+} 
+#input { 
+	border: 0; background: #EBE547; padding: 5px; border: 1px solid #421; 
+}
+</style>
+
+
+</head>
+<body>
+<div id="main">
+	James Bot
+	<div><span id="user"></span></div>
+	<div><span id="chatbot"></span></div>
+	<div><input id="input" type="text" placeholder="say anything..." autocomplete="off"/></div>
+</div>
+  
+</body>
+</html>
+
+-->

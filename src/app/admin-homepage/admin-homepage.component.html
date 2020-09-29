@@ -1,0 +1,45 @@
+
+
+<div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Welcome Admin</p>  
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>
+            
+            <form (ngSubmit)="addManager()">
+                <button class = "btn btn-info btn-lg" style="width: 250px;" ><h1>Add manager</h1></button>
+            </form><br>
+            <form (ngSubmit)="getAllManagers()">
+                <button class = "btn btn-info btn-lg" style="width: 250px;"><h1>Manager details</h1></button>
+            </form> <br>
+            <form (ngSubmit)="getAllDrivers()">
+                <button class = "btn btn-info btn-lg" style="width: 250px;"><h1>Driver details</h1></button>
+              </form> <br>
+              <form (ngSubmit)="regDriver()">
+                <button class = "btn btn-info btn-lg" style="width: 250px;"><h1>Add driver</h1></button>
+            </form>   <br>
+            <form (ngSubmit)="seeAllRequests()">
+                <button class = "btn btn-info btn-lg" style="width: 250px;"><h1>Pending requests</h1></button>
+            </form><br>
+            <form (ngSubmit)="seeAllRecords()">
+              <button class = "btn btn-info btn-lg" style="width: 250px;"><h1>All records</h1></button>
+          </form>    
+     
+      <br>
+      <button class = "btn btn-info btn-lg" (click)="logout()" style="width: 250px;"><h1>Logout</h1></button>
+      <!--<a routerLink="" class="list-group-item">Logout</a>-->
+  </h2>
+        </div>
+        <div >
+          <img style="margin-top:40px; ;width: 700px;height: 300px;" src="assets\images\packers.png" alt="Moving made easy" >
+        </div>
+      
+      
+    </div>
+  </div>
+
+  

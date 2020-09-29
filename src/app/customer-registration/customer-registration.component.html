@@ -1,0 +1,108 @@
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+</head>
+
+<div class="container">
+<hr>
+    <div class="jumbotron text-center">     
+        <h1>MOVING MADE EASY!</h1>    
+    </div>
+
+
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="card">
+    <header class="card-header">
+	    <h3 class="card-title mt-2" style="text-align: center;">Customer registration</h3>
+    </header>
+<article class="card-body">
+<form name="myForm" #loginForm= "ngForm" (ngSubmit)="validateUser(loginForm.value)"   style="text-align:justify" method="post" >
+
+	<h4>
+	<div class="col form-group">
+		<label style="width:200px;">Name</label>   
+		  <input type="text" style="width:200px;" name = "custName" [(ngModel)] = 'customer.custName' required >
+	</div> <!-- form-group end.// -->
+	<div class="col form-group">
+		<label style="width:200px;">Mobile</label>
+		  <input type="text" style="width:200px;" name = "custPhone" [(ngModel)] = 'customer.custPhone' required>
+	</div> <!-- form-group end.// -->
+	<div class="col form-group">
+		<label style="width:200px;">Email</label>
+		  <input type="text" style="width:200px;" name = "email" [(ngModel)] = 'customer.email' required>
+	</div> <!-- form-group end.// -->
+	<div class="col form-group">
+		<label style="width:200px;">Resident state</label>
+		<select id="inputState" style="width:200px;" name = "residentState" [(ngModel)] = 'customer.residentState' style="width: 200px;" required>
+		  
+			<option>Telangana</option>
+			<option>Maharashtra</option>
+			<option >Andhra Pradesh</option>
+			<option>Tamil Nadu</option>
+		</select>
+	  </div> 
+	  <div class="col form-group">
+		  <label style="width:200px;">Resident area</label>   
+			<input type="text" style="width:200px;" name = "residentArea" [(ngModel)] = 'customer.residentArea' required>
+	  </div>
+	  <div class="col form-group">
+		<label style="width:200px;">Destination state</label>
+		<select id="inputState" style="width:200px;" name = "destinationState" [(ngModel)] = 'customer.destinationState' style="width: 200px;" required>
+		  
+			<option>Telangana</option>
+			<option>Maharashtra</option>
+			<option >Andhra Pradesh</option>
+			<option>Tamil Nadu</option>
+		</select>
+	  </div> 
+	  <div class="col form-group">
+		  <label style="width:200px;">Destination area</label>   
+			<input type="text" style="width:200px;" name = "destinationArea" [(ngModel)] = 'customer.destinationArea' required>
+	  </div>
+
+	  <div class="col form-group">
+		<label style="width:200px;">Vehicle type</label>
+		<select id="inputState" style="width:200px;" name = "vehicleType" [(ngModel)] = 'customer.vehicleType' style="width: 200px;;" required>
+		  
+			<option>Tempo</option>
+			<option>Truck</option>
+		</select>
+	  </div> <!-- form-group end.// -->
+	  <div class="col form-group">
+		<label style="width:200px;">Date of relocation</label>
+		<input style="width:200px;"placeholder="yyyy-mm-dd" type="date" [(ngModel)] = 'customer.date' name="setTodaysDate" required>
+	  </div>	
+
+	
+	<div class="form-group">
+		<label style="width:213px;">&nbsp;&nbsp;&nbsp;&nbsp;Other requirements&nbsp;&nbsp;</label>
+	    <input type="text" style="width:200px;" name = "requirements" [(ngModel)] = 'customer.requirements' >
+	</div> <!-- form-group end.// -->  
+    <div class="form-group" style="text-align: center;">
+        <button class="btn btn-primary btn-lg " [disabled] = "!loginForm.valid"  > <h4> Register </h4> </button>
+    </div> <!-- form-group// -->      
+</h4>  
+</form>
+</article> <!-- card-body end .// -->
+
+</div> <!-- card.// -->
+</div> <!-- col.//-->
+<div class="col-md-6">
+	<img src="assets\images\cust_reg.png" alt="COVID-19 guidelines" style="width:400px;height:500px;">
+</div>
+
+</div> <!-- row.//-->
+</div> 
+<!--container end.//-->
+
+
+
+<br><br>

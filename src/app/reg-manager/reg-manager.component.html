@@ -1,0 +1,131 @@
+<!--<div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Add manager</p>  
+</div>
+
+<div class="row justify-content-center">
+   <!-- <div class="col-md-6">
+    <div class="card">
+        <header class="card-header">
+            <h3 class="card-title mt-2">Manager registration</h3>
+        </header>
+    <article class="card-body">
+        <form  #RegisterForm= "ngForm" (ngSubmit)="RegisterManager(RegisterForm)" style="text-align: center;">
+           <h4> <div class="col form-group">
+                
+                  <input type="text" name = "managerName" [(ngModel)] = 'manager.managerName' placeholder="Name" style="text-align: center;">
+            </div> 
+            <div class="col form-group">
+                
+                  <input type="text" name = "managerPhone" [(ngModel)] = 'manager.managerPhone' placeholder="Phone" style="text-align: center;">
+            </div> 
+            <div class="col form-group">
+                   
+                      <input type="text" name = "managerBranch" [(ngModel)] = 'manager.managerBranch' placeholder="Branch" style="text-align: center;">
+            </div>		       
+           <div class="col form-group">
+            
+              <input type="number" name = "managerSalary" [(ngModel)] = 'manager.managerSalary' placeholder="Salary" style="text-align: center;">
+           </div> 
+           <div class="col form-group">
+            
+              <input type="text" name = "loginId" [(ngModel)] = 'manager.loginId' placeholder="Login ID" style="text-align: center;">
+           </div>
+          <div class="col form-group">
+          
+            <input type="password" name = "password" [(ngModel)] = 'manager.password' placeholder="Password" style="text-align: center;">
+        </div>    
+        
+        <div style="text-align: center;">
+            <button class="btn btn-info btn-lg" (click)="RegisterManager(RegisterForm)"> Register  </button>
+        </div></h4>
+    </form>
+    </article>
+    </div>
+  
+</div>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Moving made easy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.pubnub.com/pubnub-3.15.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+  
+  
+</head>
+<body >
+
+
+<div class="jumbotron text-center" >
+     
+  <h1>MOVING MADE EASY!</h1>
+  <p>With you on your journey to your new world.</p>  
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: 450px;;">
+        <header class="card-header">
+            <h3 class="card-title mt-2" style="text-align: center;">Manager registration</h3>
+        </header>
+        <article class="card-body">
+            <form  #RegisterForm= "ngForm" (ngSubmit)="RegisterManager(RegisterForm)" style="text-align: center;">
+               <h4> <div class="col form-group">
+                       <label style="width: 75px;">Name:</label>
+                      <input type="text" name = "managerName" [(ngModel)] = 'manager.managerName' style="margin-left: 20px;" >
+                </div> 
+                <div class="col form-group">
+                    <label style="width: 75px;">Phone:</label>
+                      <input type="text" name = "managerPhone" [(ngModel)] = 'manager.managerPhone' style="margin-left: 20px;">
+                </div> 
+                <div class="col form-group">
+                    <label style="width: 75px;">Branch:</label>
+                          <input type="text" name = "managerBranch" [(ngModel)] = 'manager.managerBranch' style="margin-left: 20px;">
+                </div>		       
+               <div class="col form-group">
+                <label style="width: 75px;">Salary:</label>
+                  <input type="number" name = "managerSalary" [(ngModel)] = 'manager.managerSalary' style="margin-left: 20px;">
+               </div> 
+               <div class="col form-group">
+                <label style="width: 75px;">Login ID:</label>
+                  <input type="text" name = "loginId" [(ngModel)] = 'manager.loginId' style="margin-left: 20px;">
+               </div>
+              <div class="col form-group">
+                <label style="width: 75px;">Password:</label>
+                <input type="password" name = "password" [(ngModel)] = 'manager.password' style="margin-left: 20px;">
+            </div>    
+            
+            <div style="text-align: center;">
+                <button class="btn btn-info btn-lg" (click)="RegisterManager(RegisterForm)"> Register  </button>
+            </div></h4>
+        </form>
+        </article>
+    </div>
+        
+        
+    </div>
+      <div class="media border p-3" style="margin-left: 100px;height: 10%;">
+        <img src="assets\images\packers.png" alt="Moving made easy" >
+      </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
+
+

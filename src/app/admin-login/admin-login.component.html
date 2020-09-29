@@ -1,0 +1,41 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    </head>
+    
+    <div class="jumbotron text-center" color = "pink">
+     
+        <h1>MOVING MADE EASY!</h1>
+        <p>Welcome Admin</p>  
+      </div>
+    <div class ="container">
+    <form  #loginForm= "ngForm" class = "form-group" (ngSubmit)="validateUser(loginForm.value)"novalidate>
+        <div class = "input-group">
+            <span class = "input-group-addon"><i class = "glyphicon glyphicon-user"></i></span>
+        <input type = "text" class = "form-control" name="loginId" ngModel #loginId="ngModel" placeholder = "loginId" required minlength = "4"><br/>
+       </div>
+       <div class = "input-group">
+        <span class = "input-group-addon"><i class = "glyphicon glyphicon-lock"></i></span>
+        <input type = "password" class = "form-control" name="password" ngModel #password="ngModel" placeholder = "password"required><br/>
+    </div>
+        <button class = "btn btn-primary" [disabled] = "!loginForm.valid"  (click)="loginUser()">Login</button> 
+        <!--<a  (click)="loginUser()" routerLinkActive="active">Login</a>-->
+    </form>
+    
+    
+    
+    
+    <!--
+    <div class = "text-danger">
+        Please Enter<br>
+    <div *ngIf="loginForm.touched && loginId.errors?.required">Login Id</div>
+    <div *ngIf="loginForm.touched && password.errors?.required">Password</div>
+    </div>  
+    -->

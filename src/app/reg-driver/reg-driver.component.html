@@ -1,0 +1,131 @@
+<!-- <div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Add Driver {{manager.managerBranch}} </p>  
+</div>
+
+<div class="row justify-content-center">
+   
+    <div class="card">
+        <header class="card-header">
+            <h3 class="card-title mt-2">Driver registration</h3>
+        </header>
+    <article class="card-body">
+        <form  #RegisterForm= "ngForm" (ngSubmit)="RegisterDriver(RegisterForm)">
+           <h4> <div class="col form-group">
+                <label>Name </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                  <input type="text" name = "custName" [(ngModel)] = 'driver.driverName' placeholder="">
+            </div> 
+            <div class="col form-group">
+                <label>Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" name = "custPhone" [(ngModel)] = 'driver.driverPhone' placeholder=" ">
+            </div> 
+            <div class="col form-group">
+                    <label>Vehicle number</label>   &nbsp;
+                      <input type="number" name = "vehicleId" [(ngModel)] = 'driver.vehicleId'>
+            </div>		       
+        <div class="col form-group">
+            <label>Vehicle type</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="inputState" name = "vehicleType" [(ngModel)] = 'driver.vehicleType'>
+              <option>Preferred vehicle type</option>
+                <option>Tempo</option>
+                <option>Truck</option>
+            </select>
+          </div> 
+          <div class="col form-group">
+            <label>Vehicle charges </label>   &nbsp;
+              <input type="text" name = "vehicleCharges" [(ngModel)] = 'driver.vehicleCharges' placeholder="">
+        </div>      
+        
+        <div style="text-align: center;">
+            <button class="btn btn-info btn-lg" (click)="RegisterDriver(RegisterForm)"> Register  </button>
+        </div></h4>
+    </form>
+    </article>
+    </div>
+   
+</div> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Moving made easy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.pubnub.com/pubnub-3.15.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+  
+  
+</head>
+<body >
+
+
+<div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Add Driver {{manager.managerBranch}} </p>  
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: 450px;;">
+        <header class="card-header">
+            <h3 class="card-title mt-2" style="text-align: center;">Driver registration</h3>
+        </header>
+        <article class="card-body">
+          <form  #RegisterForm= "ngForm" (ngSubmit)="RegisterDriver(RegisterForm)">
+             <h4> <div class="col form-group">
+                  <label>Name </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                    <input type="text" name = "custName" [(ngModel)] = 'driver.driverName' placeholder="">
+              </div> 
+              <div class="col form-group">
+                  <label>Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name = "custPhone" [(ngModel)] = 'driver.driverPhone' placeholder=" ">
+              </div> 
+              <div class="col form-group">
+                      <label>Vehicle number</label>   &nbsp;
+                        <input type="number" name = "vehicleId" [(ngModel)] = 'driver.vehicleId'>
+              </div>		       
+          <div class="col form-group">
+              <label>Vehicle type</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <select id="inputState" name = "vehicleType" [(ngModel)] = 'driver.vehicleType'>
+                <option>Preferred vehicle type</option>
+                  <option>Tempo</option>
+                  <option>Truck</option>
+              </select>
+            </div> 
+                 
+          
+          <div style="text-align: center;">
+              <button class="btn btn-info btn-lg" (click)="RegisterDriver(RegisterForm)"> Register  </button>
+          </div></h4>
+      </form>
+      </article>
+      </div>
+        
+        
+    </div>
+      <div class="media border p-3" style="margin-left: 100px;height: 10%;">
+        <img src="assets\images\packers.png" alt="Moving made easy" >
+      </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

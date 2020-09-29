@@ -1,0 +1,19 @@
+<div class="jumbotron text-center" color = "pink">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>OTP confirmation</p>  
+  </div>
+<div class="text-center">
+    <h2>
+<p>We have sent you a mail with the OTP.<br>
+    Please enter OTP<br>
+</p>
+</h2>
+    <form  #otpForm= "ngForm" (ngSubmit)="confirm(otpForm.value)">
+        <h3>
+            <input type = "password" name="otp" ngModel #otp="ngModel" placeholder = "Enter OTP" required minlength = "4"><br/>
+            <button class = "btn btn-primary" [disabled] = "!otpForm.valid" (click)="validate()">Confirm</button> 
+        </h3>
+    </form>
+</div>
+

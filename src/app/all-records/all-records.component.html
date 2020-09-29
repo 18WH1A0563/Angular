@@ -1,0 +1,54 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+
+<div class="jumbotron text-center" color = "pink">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Records</p>  
+  </div>
+<div class="container">
+
+  <table class = "table table-bordered table-striped table-hover table-sm" style="text-align: center;">
+      <thead>
+          <tr>
+            <th style="text-align: center;">Transaction Id</th>
+            <th style="text-align: center;">Name</th>
+            <th style="text-align: center;">Phone</th>
+            <th style="text-align: center;">Resident state</th>
+            <th style="text-align: center;">Destination state</th>
+            <th style="text-align: center;">Date(YYYY-MM-DD)</th>
+            <th style="text-align: center;">Vehicle type</th>
+            <th style="text-align: center;">Resident Area</th>
+            <th style="text-align: center;">Destination area</th>
+            <th style="text-align: center;">Requirements</th>
+            <th style="text-align: center;">Bill</th>
+            <th style="text-align: center;">Looking for service?</th>
+           
+          </tr>
+      </thead>
+      <tr *ngFor="let customer of customers">
+        <td>{{customer.transactionId }}</td>
+        <td>{{customer.custName}}</td>
+        <td>{{customer.custPhone}}</td>
+        <td>{{customer.residentState }}</td>
+        <td>{{customer.destinationState }}</td>
+        <td>{{customer.date }}</td>
+        <td>{{customer.vehicleType }}</td>
+        <td>{{customer.residentArea}}</td>
+        <td>{{customer.destinationArea}}</td>
+        <td>{{customer.requirements}}</td>
+        <td>{{customer.bill | currency : 'INR'}}</td>
+        <td *ngIf='customer.otp == 0'>No</td>
+        <td *ngIf='customer.otp > 0'>Yes</td>
+        
+      </tr>
+    </table>
+</div>

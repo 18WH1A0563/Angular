@@ -1,0 +1,122 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+<!-- Form Name -->
+<legend style="text-align: center;">BILL</legend>
+
+<!-- Text input-->
+<div class="col-md-6" style="text-align: center;">
+  <form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Name :</label>  
+      <div class="col-md-4"> 
+        {{customer.custName}}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Phone :</label>  
+    <div class="col-md-4"> 
+      {{customer.custPhone}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" >From :</label>  
+    <div class="col-md-4"> 
+      {{customer.residentArea}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" >To :</label>  
+    <div class="col-md-4"> 
+      {{customer.destinationArea}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label">Distance :</label>  
+    <div class="col-md-4">
+      {{output[0] }} km
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label">Price per km :</label>  
+    <div class="col-md-4">
+      {{ppk | currency : 'INR'}}
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">Vehicle charges :</label>  
+    <div class="col-md-4">
+      {{output[1].vehicleFees | currency : 'INR'}}
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">Driver charges :</label>  
+    <div class="col-md-4">
+      {{output[1].driverFees | currency : 'INR'}}
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">Travel charges :</label>  
+    <div class="col-md-4">
+      {{output[1].distanceFees | currency : 'INR'}}
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label" >COVID-19 charges :</label>  
+    <div class="col-md-4"> 
+      {{output[1].covidCharges | currency : 'INR'}}  
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Total amount :</label>  
+    <div class="col-md-4">   
+      {{output[1].total | currency : 'INR'}}
+    </div>
+  </div>
+
+ 
+  <button type="button"  class="btn btn-success " data-toggle="modal" data-target="#myModal1">Continue</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Confirmation </h4>
+        
+        <div class="modal-body">
+          <p>Confirm transaction?If you continue, you will be receiving an email within 10 minutes.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button"  class="btn btn-success " data-dismiss="modal" (click) = "confirm()">Continue</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          
+                                  
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No,wait</button>
+        </div>       
+      </div>
+    </div>
+  </div>
+
+  </form>
+</div>
+
+<div class="col-md-6" style="text-align: center;">
+  <img src="assets\images\Capture3.JPG" alt="COVID-19 guidelines" style="width:500px;height:550px;">
+
+</div>
+
+
+

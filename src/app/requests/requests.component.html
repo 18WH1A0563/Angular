@@ -1,0 +1,115 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
+
+    <div class="modal fade" id="allocate">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close" data-dismiss="modal">&times;</span>
+                  <h4 class="modal-title">Allocate driver</h4>
+              </div>
+              <div class="modal-body">
+                Enter Vehicle Number: <input type="number" name="id" [(ngModel)]="id">
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-sm" (click)="onClickMe(id)" data-dismiss="modal">Allocate</button>
+               </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="reject">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close" data-dismiss="modal">&times;</span>
+                  <h4 class="modal-title">Reject customer</h4>
+              </div>
+              <div class="modal-body">
+                Enter Message: <input type="text" name="message" [(ngModel)]="message">
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-sm" (click)="onClickMeReject()" data-dismiss="modal">Reject</button>
+               </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="jumbotron text-center" color = "pink">
+     
+        <h1>MOVING MADE EASY!</h1>
+        <p>Requests in {{manager.managerBranch}}</p>  
+      </div>
+    <div class="container" >
+      <div class="row justify-content-center">
+      <table class = "table table-bordered table-striped table-hover table-sm" style="text-align: center;">
+          <thead>
+              <tr>
+               <th style="text-align: center;">Transaction Id</th>
+                <th style="text-align: center;">Name</th>
+              <!--<th style="text-align: center;">Branch</th>-->
+              <th style="text-align: center;">Phone</th>
+              <th style="text-align: center;">Source</th>
+              <th style="text-align: center;">Destination</th>
+              <th style="text-align: center;">Date</th>
+              <th style="text-align: center;">Vehicle Type</th>
+              <th style="text-align: center;">Bill</th>
+              <th style="text-align: center;">Requirements</th>
+              <th style="text-align: center;">Allocate driver</th>
+              <th style="text-align: center;">Reject customer</th>
+              </tr>
+          </thead>
+          <tr *ngFor="let customer of customers;; let i = index">
+            <td>{{customer.transactionId }}</td>
+            <td>{{customer.custName}}</td>
+            <!--<td>{{driver.driverBranch}}</td>-->
+            <td>{{customer.custPhone}}</td>
+            <td>{{customer.residentArea }}</td>
+            <td>{{customer.destinationArea }}</td>
+            <td>{{customer.date }}</td>
+            <td>{{customer.vehicleType }}</td>
+            <td>{{customer.bill | currency : 'INR'}}</td>
+            <td>{{customer.requirements }}</td>
+            <td><button (click)="showEditPopup(customer)"  class = "glyphicon glyphicon-pencil" data-toggle="modal" data-target="#allocate"></button></td>
+            <td><button (click)="showRejectPopup(customer)"  class = "glyphicon glyphicon-remove" data-toggle="modal" data-target="#reject"></button></td>
+          </tr>
+        </table>
+        <p style="text-align: left;">Driver details</p>
+
+        <table class = "table table-bordered table-striped table-hover table-sm">
+          <thead>
+              <tr>
+              <th style="text-align: center;">Name</th>
+              <th style="text-align: center;">Branch</th>
+              <th style="text-align: center;">Phone</th>
+              <th style="text-align: center;">Status</th>
+              <th style="text-align: center;">Salary</th>
+              <th style="text-align: center;">Vehicle number</th>
+               <th style="text-align: center;">Vehicle type</th>
+                <th style="text-align: center;">Vehicle charges</th>
+              </tr>
+          </thead>
+          <tr *ngFor="let driver of drivers">
+            <td>{{driver.driverName}}</td>
+            <td>{{driver.driverBranch}}</td>
+            <td>{{driver.driverPhone}}</td>
+            <td>{{driver.driverStatus }}</td>
+            <td>{{driver.salary | currency : 'INR'}}</td>            
+            <td>{{driver.vehicleId }}</td>
+            <td>{{driver.vehicleType }}</td>
+            <td>{{driver.vehicleCharges}}</td>
+          </tr>
+        </table>
+      
+        </div>
+        
+      </div>

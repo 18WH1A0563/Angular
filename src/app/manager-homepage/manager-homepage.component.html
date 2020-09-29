@@ -1,0 +1,128 @@
+<!--<head>
+  <style>
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #24a0ed;
+  color: white;
+}
+  </style>
+</head>
+
+<!--<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+      <a class="navbar-brand">Angular Router</a>
+      <ul class="nav navbar-nav" routerLinkActive="active">
+          <li class="nav-item"><a class="nav-link active" routerLink="/app-manager-homepage/app-reg-driver">Home</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/app-manager-homepage/app-show-drivers">About</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="courses">Courses</a></li>
+      </ul>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-light bg-faded">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link"  [routerLink]="['app-show-drivers']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  [routerLink]="['app-show-drivers']">Search</a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="app-show-drivers">Show Drivers<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="app-requests">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="showemp">Show Employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="products">Show Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="empbyid">Show Employee By Id</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+<div class="topnav navbar-fixed-top">
+  <a class="active " routerLink="/app-manager-homepage/app-show-drivers">Requests</a>
+  <a routerLink="/app-manager-homepage/app-reg-driver">Add driver</a>
+  <a routerLink = "/app-manager-homepage/app-show-drivers">Drivers list</a>
+  <a href="#about">About</a>
+</div>
+<router-outlet></router-outlet>
+--><div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Welcome {{ manager.managerName }}</p>  
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>
+          <form (ngSubmit)="seeAllRequests()">
+            <button class = "btn btn-info btn-lg" style = "width:300px;" (click)="loginUser()"><h1>See all requests</h1></button>
+          </form>
+      
+      <br>
+  
+      <form (ngSubmit)="getAllDriversBranchwise()">
+        <button class = "btn btn-info btn-lg" style = "width:300px;"  (click)="loginUser()"><h1>Driver details</h1></button>
+      </form>
+  
+      <br>
+      <form (ngSubmit)="addDriver()">
+        <button class = "btn btn-info btn-lg" style = "width:300px;"  (click)="loginUser()"><h1>Add driver</h1></button>
+      </form>
+     
+      <br>
+      <form (ngSubmit)="changeDriverStatus()">
+        <button class = "btn btn-info btn-lg" style = "width:300px;" (click)="loginUser()"><h1>Deallocate driver</h1></button>
+      </form>
+      <br>
+      <button class = "btn btn-info btn-lg" style = "width:300px;" (click)="logout()"><h1>Logout</h1></button>
+      
+      
+  </h2>
+        </div>
+        <div class="media border p-3">
+          <img src="assets\images\packers.png" alt="Moving made easy" >
+        </div>
+      
+      
+    </div>
+  </div>

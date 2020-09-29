@@ -1,0 +1,33 @@
+<div class="jumbotron text-center">
+     
+    <h1>MOVING MADE EASY!</h1>
+    <p>Welcome Admin</p>  
+</div>
+
+<div class="row justify-content-center">
+
+    <div class="card">
+        <header class="card-header">
+            <h3 class="card-title mt-2">Add advertisement!</h3>
+        </header>
+    <article class="card-body">
+        <form  #AdsForm= "ngForm" (ngSubmit)="addAds(AdsForm.value)">
+            <h4> <div class="col form-group">
+                 <label>Heading </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                   <input type="text" #title ngModel name="title" id="title" placeholder="">
+             </div> <!-- form-group end.// -->
+             <div class="col form-group">
+                 <label>Description</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type="text" #description ngModel name="description" id="description" style="width: 200px;height: 200px;" placeholder=" ">
+             </div> <!-- form-group end.// -->
+            <div class="col form-group">
+                <img [src]="imageUrl" style="width:250px;height: 200px;">
+                <input type="file" #Image accept ="image/*" (change)="handleFileInput($event.target.files)">
+            </div>
+             <div style="text-align: center;">
+                <button class="btn btn-info btn-lg" (click)="addAds(AdsForm)"> Add  </button>
+            </div>
+             </h4>
+        </form>
+    </article>
+</div>
